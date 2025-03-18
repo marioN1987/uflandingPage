@@ -56,6 +56,13 @@ MIXINS
   padding-top: 20px;
 }
 
+@media (min-width: 1200px) {
+  .gx-100 {
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+  }
+}
+
 .p-32 {
   padding: 2rem !important;
 }
@@ -156,9 +163,9 @@ Page sections styles
   background-color: #0A0B0D;
 }
 #hero > .container-fluid {
-  background: url("../bg-fade1.png"), url("../bg-fade1.png"), #0A0B0D;
+  background: url("../images/bg-fade-big.png"), url("../images/bg-fade-small.png"), #0A0B0D;
   background-repeat: no-repeat, no-repeat;
-  background-position: top 0% right 40%, top 150px right -200px;
+  background-position: top right, top 290px right -200px;
 }
 #hero > .container-fluid > .row.header > .logo {
   padding-top: 27px;
