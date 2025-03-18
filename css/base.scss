@@ -1,0 +1,351 @@
+/*
+Reset styles
+*/
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6,
+p {
+    margin: unset;
+}
+
+/**
+Navbar custom 
+**/
+.navbar > .container-fluid {
+    @media (min-width: 768px) {
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+}
+
+.bg-dark {
+    background-color: #0A0B0D !important;
+}
+
+$light-grey: #ACAEB7;
+
+// override rows left/right space for tablets and desktop
+@media (min-width: 768px) {
+    .row {
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+}
+
+/*
+MIXINS
+*/
+@mixin font-60-72 {
+    font-size: 30px;
+    line-height: 38px;
+
+    @media (min-width: 576px) {
+        font-size: 30px;
+        line-height: 38px;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 60px;
+        line-height: 72px;
+    }
+}
+
+@mixin font-36-44 {
+    font-size: 24px;
+    line-height: 32px;
+    
+    @media (min-width: 786) {
+        font-size: 36px;
+        line-height: 44px;
+    }
+}
+
+@mixin font-18-28 {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+@mixin font-20-30 {
+    font-size: 16px;
+    line-height: 24px;
+
+    @media (min-width: 768px) {
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+@mixin font-16-24 {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+@mixin font-24-32 {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.space-top-bottom-64 {
+    padding-block: 32px;
+
+    @media (min-width: 768px) {
+        padding-block: 64px;
+    }
+}
+
+.space-top-bottom-96 {
+    padding-block: 32px;
+
+    @media (min-width: 576px) {
+        padding-block: 64px;
+    }
+
+    @media (min-width: 768px) {
+        padding-block: 96px;
+    }
+
+}
+
+.pt-20 {
+    padding-top: 20px;
+}
+
+.p-32 {
+    padding: 2rem !important;
+}
+
+.gy-6 {
+    row-gap: 4rem;
+}
+
+.pt-64 {
+    padding-top: 64px;
+}
+
+h1 {
+    @include font-60-72;
+}
+
+h2 {
+    @include font-36-44;
+}
+
+h3 {
+    @include font-24-32;
+}
+
+h4 {
+    @include font-20-30;
+}
+
+h5 {
+    @include font-18-28;
+}
+
+.free-report-btn {
+    @include font-16-24;
+    background-color: #1335F5;
+    box-shadow: 0px 1px 2px 0px #1018280D;
+    padding-block: 12px;
+    text-align: center;
+}
+
+.logo {
+    width: 195px;
+    height: 30px;
+}
+
+label {
+    font-size: 16px;
+    line-height: 24px;
+    color: $light-grey;
+    display: block;
+}
+
+input {
+    @include font-16-24;
+    border: 1px solid #5E5E62;
+    box-shadow: 0px 1px 2px 0px #1018280D;
+    padding: 10px 14px;
+    border-radius: 4px;
+    background-color: transparent;
+    color: $light-grey;
+}
+
+
+
+/*
+Page sections styles
+*/
+#hero {
+    background-color: #0A0B0D;
+    > .container-fluid {
+        background: url('../bg-fade1.png'), url('../bg-fade1.png'), #0A0B0D;
+        background-repeat: no-repeat, no-repeat;
+        background-position: top 0% right 40%, top 150px right -200px;
+        
+        > .row {
+            
+            &.header {
+                > .logo {
+                    padding-top: 27px;
+                }
+
+            }
+
+            &.top-section {
+                .compliance-frm {
+                    border-radius: 16px;
+                    background-color: #1A1B21;
+                    padding: 32px;
+                    border: 1px solid $light-grey;
+                    margin-top: 54px;
+
+                    > .title {
+                        @include font-24-32;
+                        color: white;
+                        text-align: center;
+                        margin-bottom: 48px;
+                    }
+
+                    > .form-group + .form-group {
+                        margin-top: 24px;
+                    }
+
+                    > .free-report-btn {
+                        margin-top: 32px;
+                    }
+
+                    > .legal {
+
+                        > p {
+                            @include font-16-24;
+                            color: #475467;
+                            padding-top: 16px;
+                        }
+                    }
+
+                    @media (min-width: 768px) {
+                        padding: 48px;
+                    }
+                }
+
+                > .text-section {
+                    overflow:hidden;
+
+                    > .text > p {
+                        padding-top: 36px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#compliance-guide {
+    background-color: #1A1B21;
+    > .container-fluid {
+        .headline {
+            > h3 {
+                color: $light-grey;
+            }
+
+            > p {
+                @include font-20-30;
+                color: $light-grey;
+            }
+        }
+
+        .features {
+            padding-top: 24px;
+
+            p {
+                @include font-18-28;
+                color: $light-grey;
+            }
+
+            @media (min-width: 576px) {
+                row-gap: 24px;
+                padding-top: 24px;
+            }
+
+            @media (min-width: 768px) {
+                padding-top: 32px;
+            }
+        }
+
+        button {
+            margin-top: 64px;
+        }
+    }
+}
+
+#faq {
+    background-color: #0A0B0D;
+    > .container-fluid {
+        p {
+            @include font-18-28;
+            color: $light-grey;
+        }
+    }
+}
+
+#industry-experts {
+    background-color: #1A1B21;
+    > .container-fluid {
+        .headline {
+            > h3 {
+                color: $light-grey;
+            }
+
+            > p {
+                @include font-20-30;
+                color: $light-grey;
+            }
+        }
+
+        .wrapper {
+            gap: 30px;
+
+            .box {
+                position: relative;
+                background-color: #0A0B0D;
+                border-radius: 16px;
+                max-width: 378px;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    border-radius: 16px; 
+                    padding: 1px; 
+                    background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%); 
+                    mask: 
+                      linear-gradient(#fff 0 0) content-box, 
+                      linear-gradient(#fff 0 0);
+                    mask-composite: exclude; 
+                }
+
+                .description {
+                    @include font-16-24;
+                    color: $light-grey;
+                }
+            }
+        }
+    }
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
