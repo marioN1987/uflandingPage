@@ -6,6 +6,10 @@ p {
   margin: unset;
 }
 
+ol, ul {
+  padding-left: unset;
+}
+
 /**
 Navbar custom 
 **/
@@ -21,7 +25,7 @@ Navbar custom
 }
 
 @media (min-width: 768px) {
-  .row {
+  .row:not(.footer-content) {
     padding-left: 64px;
     padding-right: 64px;
   }
@@ -299,6 +303,28 @@ Page sections styles
   font-size: 16px;
   line-height: 24px;
   color: #ACAEB7;
+}
+
+#footer {
+  background-color: #0A0B0D;
+}
+#footer > .container-fluid .menu ul {
+  list-style: none;
+}
+#footer > .container-fluid .menu ul > li > a {
+  font-size: 18px;
+  line-height: 28px;
+  color: #A3A5A6;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  #footer > .container-fluid .menu,
+  #footer > .container-fluid .magnates-logo {
+    margin-top: 48px;
+  }
+  #footer > .container-fluid .description {
+    margin-top: 32px;
+  }
 }
 
 /* The dots/bullets/indicators */

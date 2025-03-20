@@ -6,6 +6,10 @@ p {
     margin: unset;
 }
 
+ol, ul {
+    padding-left: unset;
+}
+
 /**
 Navbar custom 
 **/
@@ -24,7 +28,7 @@ $light-grey: #ACAEB7;
 
 // override rows left/right space for tablets and desktop
 @media (min-width: 768px) {
-    .row {
+    .row:not(.footer-content) {
         padding-left: 64px;
         padding-right: 64px;
     }
@@ -339,6 +343,31 @@ Page sections styles
     }
 }
 
+#footer {
+    background-color: #0A0B0D;
+    > .container-fluid {
+        .menu ul {
+            list-style: none;
+
+            > li > a {
+                @include font-18-28();
+                color: #A3A5A6;
+                text-decoration: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .menu,
+            .magnates-logo {
+                margin-top: 48px;
+            }
+
+            .description {
+                margin-top: 32px;
+            }
+        }
+    }
+}
 
 /* The dots/bullets/indicators */
 .dot {
